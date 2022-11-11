@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="decodificando.css">
+    <title>Mensagem Oculta</title>
+</head>
+
+<body>
+    <header>
+        <h1>Criptografar & Descriptografar</h1>              <!-- TÍTULO -->
+    </header>
+
+    <main>
+        <form>
+            <textarea name="texto" id="texto" cols="50" rows="3" placeholder="Digite aqui"></textarea>
+
+            <br><br>
+            <!--Caixa para selecionar-->
+            
+            <select name="select" id="select" class="select" onclick="selecao()">
+                <option id="option" value="selecione">Selecione uma opção</option>
+                <option id="base64" value="base64">Base64</option>
+                <option id="cifra" value="cifra">Cifra de César</option>
+            </select>
+
+            <div class="chave-cont" id="chaveCont">
+
+                <!--Cifra de César-->
+
+                <label class="chave" for="range">Escolha uma chave:</label>
+
+                <div class="deslize">
+                    <input type="range" value="1" min="1" max="26" class="range" id="range"
+                        oninput="rangenumber.value=value" />
+                    <input type="number" value="1" id="rangenumber" min="1" max="26" oninput="range.value=value" />
+                </div>
+
+            </div>  
+
+            <div class="radiobtn">
+
+                <!--Botão codificar e decodificar-->
+
+                <div>
+                    <input type="radio" id="codificar" name="selecione" value="codificar" checked/>
+                    <label for="codificar">Codificar</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="decodificar" name="selecione" value="decodificar" />
+                    <label for="decodificar">Decodificar</label>
+                </div>
+
+            </div>
+
+            <textarea id="resultado" cols="50" rows="3" placeholder="Resultado"></textarea>
+           
+            <br><br>  
+
+            <div class="btn">
+
+                <!--Botão  resultado-->
+
+                <button id="resultbtn">Codificar sua Mensagem Aqui</button>
+            </div>
+
+        </form>
+
+    </main>
+
+<br><br>
+    
+    <footer>
+        <a class="Rede1" target="_blank" href="https://github.com/JonSilv4">
+            <img src="Github logo.png">
+        <a class="Rede2" target="_blank" href="https://www.linkedin.com/in/jonatan-silva-0847a2236/">
+            <img src="Linkedin logo.png">
+        <a class="Rede2" target="_blank" href="https://codepen.io/jonsilv4">
+            <img src="codepen logo.png">
+        <a class="Rede2" target="_blank" href="https://www.codewars.com/users/JonSilv4">
+            <img src="Codewars logo.png">
+    </footer>
+
+    <script src="decodificando.js" defer></script>
+
+</body>
+
+</html>
